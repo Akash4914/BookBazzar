@@ -1,0 +1,153 @@
+*{
+    border: border-box;
+    margin: 0px;
+}
+body{
+    background-image: url(calling.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.C_form{
+    margin-left: 70px;
+}
+.Con_Info{
+    color: #ff0000;
+    text-align: center;
+}
+.Con_Info b{
+    color: #f7bcbc;
+    font-size: 50px;
+    text-shadow: 8px 1px 10px #0a0a0a;
+}
+.C_form h2{
+    font-size: 30px;
+    margin-top: 0.1px;
+    margin-left: 40px;
+    color: #000000;
+}
+.Contact_form{
+    background-image: url(contactform.jpg);
+    box-shadow: 0 0 17px rgba(4,0,6,4);
+    width: 570px;
+    margin-top: 15px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#inbox{
+    margin-top: 40px;
+}
+.Contact_form input{
+    height: 30px;
+    width: 415px;
+    color: #000000;
+    border: 0.7px solid #000000;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+.verify_b{
+    width: 60px;
+    height: 34px;
+    border: 0.7px solid black;
+    background: linear-gradient(#df1414,#7ba158,#ffc0cb);
+    border-radius: 5px;
+}
+.verify_b:hover {
+    background-color: #37495c; /* Darker shade on hover */
+    transform: translateY(1px);
+}
+#email_in{
+    width: 350px;
+    margin-bottom: 30px;
+}
+.verify_b a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+}
+.SelectBut{
+    font-size: 14px;
+    height: 34px;
+    width: 420px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    color: #000000;
+    border: 0.7px solid #000000;
+    font-family:'Courier New', Courier, monospace;
+    border-radius: 5px;
+}
+.SelectBut option{
+    color: black;
+}
+#Description_box{
+    height: 45px;
+    width: 400px;
+    color: #000000;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+    border: 0.7px solid #000000;
+    border-radius: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.checkbox{
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.checkbox input{
+    margin-top: 15px;
+    height:11px;
+    width: 13px;
+}
+#submit2{
+    width: 120px;
+    margin-left: 200px;
+    margin-bottom: 25px;
+    background: linear-gradient(#df1414,#7ba158,#ffc0cb);
+}
+#submit:hover {
+    background-color: #37495c; /* Darker shade on hover */
+    transform: translateY(1px);
+}
+/* Contact figure right side*/
+.Contact_Info{
+    position: absolute;
+    top: 250px;
+    right: 60px;
+    width: 420px;
+    height: 270px;
+    padding: 12px;
+    /* display: inline; */
+    padding-left: 35px;
+    background-image: url(image.png);
+    background-size: cover;
+}
+/* Only Contact info */
+.Contact_Info h3{
+    margin-top: 320px;
+    color: rgb(24, 24, 24);
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* link of Contact info */
+.Contact_Info a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: lighter;
+}
+#mobile{
+    color: #ff0000;
+    font-weight: lighter;
+    font-size: 20px;
+}
+.Contact_Info span{
+    font-weight: lighter;
+    font-size: 20px;
+    color: #ff0000;
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="project.css">
+    <title>SignupBookBazzar</title>
+    <style>
+        body{
+            background-image: url(3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+        .sign-up-info {
+            width: 26%;
+            text-align: center;
+        }
+        .sign-up-info h2 {
+            font-size: 2.7em;
+            color: #f89595;
+            margin-bottom: 20px;
+        }
+        .sign-up-info h1{
+            font-size: 4em;
+            color: #e7aef3;
+        }
+        .sign2 img {
+            height: 600px;
+            margin-top: 20px;
+            width: 480px;
+        }
+        #maindiv {
+            background-color: rgba(97, 110, 110, 0.9);
+            width: 400px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .Lines{
+            background-color: white;
+            height: 50px;
+            padding-top: 14px;
+        }
+        h1 {
+            color: #f16f47;
+        }
+        form {
+            padding: 20px;
+        }
+        #name,
+        #phone,
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            height: 18px;
+            margin: 1px 0;
+            padding: 12px;
+            border: none;
+            color: black;
+            border-radius: 20px;
+            background-color: rgba(238, 221, 221, 0.6);
+        }
+        #submit11,
+        input[type="reset"] {
+            width: 45%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #fd3a3a;
+            margin: 5px;
+        }
+        #submit11:hover,
+        #reset11:hover {
+            background-color: rgb(253, 162, 58);
+        }
+        .error {
+            color: #ff4d4d;
+            font-size: 0.8em;
+        }
+        #Para2{
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .log{
+            font-size: 14px;
+
+        }
+        .log a{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function sub() {
+            let isValid = true;
+    
+            const username = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm_password").value;
+            const male = document.getElementById("male").checked;
+            const female = document.getElementById("female").checked;
+    
+            document.getElementById("nameerror").innerText = "";
+            document.getElementById("emailerror").innerText = "";
+            document.getElementById("phoneerror").innerText = "";
+            document.getElementById("passworderror").innerText = "";
+            document.getElementById("confirmPasswordError").innerText = "";
+            document.getElementById("gendererror").innerText = "";
+    
+            if (username === "") {
+                document.getElementById("nameerror").innerText = "Please enter a username.";
+                isValid = false;
+            } else if (username.length < 3) {
+                document.getElementById("nameerror").innerText = "Username must be at least 3 characters.";
+                isValid = false;
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
+            if (email === "") {
+                document.getElementById("emailerror").innerText = "Please enter an email address.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailerror").innerText = "Please enter a valid email address.";
+                isValid = false;
+            }
+    
+            const phonePattern = /^[0-9]{10}$/;
+            if (phone === "") {
+                document.getElementById("phoneerror").innerText = "Please enter your phone number.";
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById("phoneerror").innerText = "Please enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+    
+            if (password === "") {
+                document.getElementById("passworderror").innerText = "Please enter a password.";
+                isValid = false;
+            } else if (password.length < 6) {
+                document.getElementById("passworderror").innerText = "Password must be at least 6 characters long.";
+                isValid = false;
+            }
+    
+            if (confirmPassword === "") {
+                document.getElementById("confirmPasswordError").innerText = "Please confirm your password.";
+                isValid = false;
+            } else if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").innerText = "Passwords do not match.";
+                isValid = false;
+            }
+    
+            if (!male && !female) {
+                document.getElementById("gendererror").innerText = "Please select your gender.";
+                isValid = false;
+            }
+    
+            return isValid; 
+        }
+    </script>    
+    <header>
+        <div class="mainbar">
+            <div class="main-bar-logo">
+                <div class="logo">BookBazzar</div>
+            </div>
+            <div class="search">
+                <input class="search-box" placeholder="Search BookBazzar.com">
+                <input id="submit" type="submit">
+            </div>
+            <div class="Submit-Book"></div>
+            <button class="Submit-Book"><a id="SubmitB" href="Link here Submit Book Page">Submit</a></button>
+            <div class="cart">
+                <button class="cart">
+                    <i class="fa-solid fa-cart-shopping">
+                        <a class="cartpage" href="cart.html"> Cart</a></i>
+                </button>
+            </div>
+            <div class="sign-in-button">
+                <button class="sign-in-button">
+                    <i class="fa-solid fa-user">
+                        <a id="Signin" href="SignUp.html"> Sign</a></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    </header>
+    <h1 class="Lines">Success is <b>Waiting</b> for you if you&nbsp;<s> Loved </s>&nbsp;Me !</h1>
+    <div class="container">
+        <div class="sign-up-info">
+            <h1> SignUp!</h1>
+            <h2>Join BookBazzar</h2>
+            <p>Welcome to BookBazzar! Join our community and get access to exclusive content, updates, and more. 
+                Sign up to enjoy all the benefits we have to offer.</p>
+            <p id="Para2"><i class="fas fa-book"></i> Access to thousands of books</p>
+            <p id="Para2"><i class="fas fa-tags"></i> Special discounts</p>
+            <p id="Para2"><i class="fas fa-globe"></i> Stay updated with trends</p>
+        </div>
+        <div id="maindiv">
+            <h1>Sign Up</h1>
+            <form onsubmit="return sub()">
+                <input type="text" id="name" placeholder="Enter your Username">
+                <span class="error" id="nameerror"></span><br>
+                <input type="email" id="email" placeholder="Enter Email I'd">
+                <span class="error" id="emailerror"></span><br>
+                <input type="text" id="phone" placeholder="Enter your phone number">
+                <span class="error" id="phoneerror"></span><br>
+                <input type="password" id="password" placeholder="Enter your password">
+                <span class="error" id="passworderror"></span><br>
+                <input type="password" id="confirm_password" placeholder="Confirm your password">
+                <span class="error" id="confirmPasswordError"></span><br>
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male"> Male
+                <input type="radio" id="female" name="gender" value="female"> Female
+                <span class="error" id="gendererror"></span><br><br>
+                <input id="submit11" type="submit" value="Submit">
+                <input id="reset11" type="reset" value="Reset"><br><br>
+                <div class="log">Already Have account &nbsp;<a href="Login.html">Login Now</a></div>
+            </form>
+        </div>
+        <div class="sign2">
+            <img src="men2.png" alt="Signup illustration">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Help</a>
+            <a href="Contact_page.html">Contact Us</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">FAQ</a>
+        </div>   
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/_mr_dyer/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/akash-prajapati91/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2024-Infinity , BookBazzar.com, Inc. or its affiliates</p>
+        <p>Conditions of India & Sale | Privacy Notice | Interest-Based Ads</p>
+    </footer>
+</body>
+</html>
